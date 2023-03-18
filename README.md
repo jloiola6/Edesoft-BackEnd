@@ -41,7 +41,7 @@ podem fazer com que este bucket e os objetos dentro dele se tornem públicos."
   5- Em seguida, aperte no botão "Fechar"
 ```
 
-Exemplo de arquivo .csv (cpf, cnpj, data):
+Exemplo de arquivo .csv (cpf, cnpj, data) a ser adicionado:
 ```bash
   123.456.789-10,82.294.958/0001-10,17-03-2023
   987.654.321-00,61.713.523/0001-11,31-12-2022
@@ -119,7 +119,7 @@ Acesse o link: https://sa-east-1.console.aws.amazon.com/lambda/home?region=sa-ea
   4 - E finalize a criação apertando em "Criar função"
 ```
 
-# Antes de adicionarmos nossa função devemos adicionar permissões do DynamoBO
+# Antes de adicionarmos o script da nossa função devemos adicionar permissões do DynamoBO
 
 Acesse, em outra aba, o link: https://us-east-1.console.aws.amazon.com/iamv2/home?region=sa-east-1#/roleshttps://us-east-1.console.aws.amazon.com/iamv2/home?region=sa-east-1#/roles
 
@@ -209,10 +209,10 @@ def lambda_handler(event, context):
 
 Nota importante: Na linha 10 coloque no parametro o nome da tabela criada
   * table = dynamo_db.Table('<nome_tabela>')
-  *Lembre-se de apertar no botão "Deploy" antes de iniciar os testes
+  * Lembre-se de apertar no botão "Deploy" antes de iniciar os testes
 
 
-Agora vamos inciar os testes:
+## Agora vamos inciar os testes:
 ```bash
   1 - Aperte no botão "Test"
 
@@ -236,4 +236,4 @@ Após rodar o teste ele, e tudo estiver configurado corretamente, será retornad
 }
 ```
 
-Isso significa que ao explorar os itens na nossa tabela criada os campos foram tratados adicionados.
+Isso significa que ao explorar os itens na nossa tabela os campos foram tratados e adicionados.
